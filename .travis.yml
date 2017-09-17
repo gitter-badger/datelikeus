@@ -25,3 +25,14 @@ before_script:
 script:
   - python manage.py test
   - pytest
+
+branches:
+  only:
+    - master
+
+notifications:
+  email:
+    recipients:
+      - other@example.com
+    on_success: never
+    on_failure: always
