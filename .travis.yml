@@ -11,7 +11,7 @@ python:
   - "3.5"
 
 install:
-  - pip install -r src/requirements/test.txt
+  - pip install -r src/requirements/local.txt
 
 before_script:
   - python src/manage.py runserver &
