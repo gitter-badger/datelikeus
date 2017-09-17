@@ -1,0 +1,20 @@
+{% load staticfiles i18n %}
+<div class="fh5co-hero" data-section="home">
+  <div class="fh5co-overlay"></div>
+  <div class="fh5co-cover text-center" data-stellar-background-ratio="0.5" style="background-image: url('{{ STATIC_URL }}images/sample_cover_bg01.jpeg')">
+    <div class="display-t">
+      <div class="display-tc">
+        <div class="container">
+          <div class="col-md-10 col-md-offset-1">
+            <div class="animate-box">
+              <h1>Store memories with your lovers..</h1>
+              <h2>Date Like Us</h2>
+              <a class="btn btn-primary btn-lg" href="{% url 'account_signup' %}" role="button">Sign Up</a>
+              <a class="btn btn-primary btn-lg" href="{% url 'account_login' %}" role="button">Sign In</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
