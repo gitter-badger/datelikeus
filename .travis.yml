@@ -14,9 +14,9 @@ install:
   - pip install -r src/requirements/test.txt
 
 before_script:
-  - python manage.py runserver &
-  - python manage.py makemigrations
+  - python src/manage.py runserver &
+  - python src/manage.py makemigrations
 
 script:
-  - python manage.py migrate -v 3
-  - python manage.py test
+  - python src/manage.py migrate -v 3
+  - python src/manage.py test
