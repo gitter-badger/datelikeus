@@ -1,4 +1,4 @@
-sudo: required
+sudo: true
 before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq build-essential gettext python-dev zlib1g-dev libpq-dev xvfb
@@ -14,7 +14,7 @@ install:
   - pip install -r src/requirements/local.txt
 
 services:
-  - postgresql
+  - postgresql: "9.6"
 
 before_script:
   - cd src
