@@ -17,9 +17,11 @@ services:
   - postgresql
 
 before_script:
+  - cd src
   - psql -c 'create database datelikeus;' -U postgres
-  - python src/manage.py migrate
-  - python src/manage.py runserver &
+  - python manage.py migrate
+  - python manage.py runserver &
 
 script:
-  - python src/manage.py test
+  - python manage.py test
+  - pytest
