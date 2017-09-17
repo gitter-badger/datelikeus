@@ -13,16 +13,15 @@ python:
 services:
   - postgresql
 
-install:
-  - cd src
-  - pip install -r requirements/local.txt
-
 before_script:
   - cd src
+
+install:
+  - pip install -r requirements/local.txt
+
+script:
   - psql -c 'create database datelikeus;' -U postgres
   - python manage.py migrate
   - python manage.py runserver &
-
-script:
   - python manage.py test
   - pytest
