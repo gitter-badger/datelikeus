@@ -1,6 +1,6 @@
 # Datelikeus [![Build Status](https://travis-ci.org/jeffminsungkim/datelikeus.svg?branch=master)](https://travis-ci.org/jeffminsungkim/datelikeus)
 
-Dating time counting service for lovers.
+Dating time counting service for lovers. :couple_with_heart: :couple: :heart:
 
 ## Built With
 
