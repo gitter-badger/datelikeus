@@ -4,6 +4,9 @@
 .LSOverride
 share/**
 
+# CI
+.travis.yml
+
 ### SublimeText ###
 # cache files for sublime text
 *.tmlanguage.cache
