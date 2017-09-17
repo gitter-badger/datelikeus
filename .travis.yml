@@ -10,19 +10,19 @@ language: python
 python:
   - "3.5"
 
-install:
-  - pip install -r src/requirements/local.txt
-
 services:
   - postgresql: "9.6"
+
+install:
+  - pip install -r src/requirements/local.txt
 
 before_script:
   - cd src
   - psql -c 'create database datelikeus;' -U postgres
+  
+script:
   - python manage.py migrate
   - python manage.py runserver &
-
-script:
   - python manage.py test
   - pytest
 
