@@ -15,9 +15,8 @@ services:
 
 before_script:
   - cd src
-
-install:
-  - pip install -r requirements/local.txt
+  install:
+    - pip install -r requirements/local.txt
 
 script:
   - psql -c 'create database datelikeus;' -U postgres
