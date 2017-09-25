@@ -21,10 +21,11 @@
           {% if request.user.is_authenticated %}
             <li class="nav-item">
               {# URL provided by django-allauth/account/urls.py #}
-              <a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>
+              <a class="nav-link" href="{% url 'users:update' %}">{% trans "My Profile" %}</a>
+              <!--<a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>-->
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_signup' %}"> {% trans "Album" %}</a> <!-- TODO: change url to album. -->
+              <a class="nav-link" href="{% url 'account_signup' %}"> {% trans "Album" %}</a> <!-- TODO: change url to user's album page. -->
             </li>
             <li class="nav-item">
               {# URL provided by django-allauth/account/urls.py #}
