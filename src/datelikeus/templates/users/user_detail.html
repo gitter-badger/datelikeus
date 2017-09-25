@@ -5,33 +5,70 @@
 
 {% block content %}
 {% include 'shared/navbar.html' %}
+
 <div class="container">
-
-  <div class="row">
-    <div class="col-sm-12">
-
-      <h2>{{ object.username }}</h2>
-      {% if object.name %}
-        <p>{{ object.name }}</p>
-      {% endif %}
+  <div id="fh5co-couple" class="fh5co-section-gray">
+    <div class="container">
+      <div class="row row-bottom-padded-md animate-box">
+        <div class="col-md-6 col-md-offset-3 text-center">
+          <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
+            <img src="{% static 'images/groom.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+            <h3>{{ object.username }}</h3>
+          </div>
+          <div class="col-md-2 col-sm-2 col-xs-2 nopadding">
+            <h2 class="amp-center"><i class="icon-heart"></i></h2></div>
+          <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
+            <img src="{% static 'images/bride.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
+            <h3>User's lover</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row animate-box">
+        <div class="col-md-8 col-md-offset-2">
+          <div class="col-md-12 text-center heading-section">
+            <h2>We've been dating</h2>
+            <p><strong>on Dec 28, 2017 &mdash; Boracay, Philippines</strong></p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-{% if object == request.user %}
-<!-- Action buttons -->
-<div class="row">
-
-  <div class="col-sm-12">
-    <a class="btn btn-primary" href="{% url 'users:update' %}" role="button">My Info</a>
-    <a class="btn btn-primary" href="{% url 'account_email' %}" role="button">E-Mail</a>
-    <!-- Your Stuff: Custom user template urls -->
+  <div id="fh5co-countdown">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2 text-center animate-box">
+        <p class="countdown">
+          <span id="days"></span>
+          <span id="hours"></span>
+          <span id="minutes"></span>
+          <span id="seconds"></span>
+        </p>
+      </div>
+    </div>
   </div>
-
+  <div id="fh5co-started" style="background-image: url('{{ STATIC_URL }}images/album_cover_bg_1.jpeg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row animate-box">
+        <div class="col-md-8 col-md-offset-2 text-center heading-section">
+          <h2>Do you wanna see our photos?</h2>
+          <p>Come checkout our lovely memories!</p>
+        </div>
+        <div class="col-md-10 col-md-offset-1 text-center">
+          {% if request.user.is_authenticated %}
+          <div class="form-group">
+            <a class="btn btn-primary btn-lg form-control" href="{% url 'about' %}" role="button">Album Box</a>
+            <!-- TODO: change url to user's album page. -->
+            {% else %}
+            <a class="btn btn-primary btn-lg form-control" href="{% url 'account_login' %}" role="button">Album Box</a> {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- End Action buttons -->
-{% endif %}
+<!-- /container -->
 
 
-</div>
+{% include 'shared/footer.html' %}
 {% endblock content %}
 

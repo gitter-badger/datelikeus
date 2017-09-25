@@ -11,8 +11,7 @@
           <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">{{ message }}</div>
       {% endfor %}
   {% endif %}-->
-
-  <div class="container">
+<div class="container">
   <div id="fh5co-couple" class="fh5co-section-gray">
     <div class="container">
       <div class="row row-bottom-padded-md animate-box">
@@ -21,7 +20,8 @@
             <img src="{% static 'images/groom.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
             <h3>Logged in user</h3>
           </div>
-          <div class="col-md-2 col-sm-2 col-xs-2 nopadding"><h2 class="amp-center"><i class="icon-heart"></i></h2></div>
+          <div class="col-md-2 col-sm-2 col-xs-2 nopadding">
+            <h2 class="amp-center"><i class="icon-heart"></i></h2></div>
           <div class="col-md-5 col-sm-5 col-xs-5 nopadding">
             <img src="{% static 'images/bride.jpg' %}" class="img-responsive" alt="Free HTML5 Bootstrap Template by FreeHTML5.co">
             <h3>User's lover</h3>
@@ -50,7 +50,30 @@
       </div>
     </div>
   </div>
-</div> <!-- /container -->
+  <div id="fh5co-started" style="background-image: url('{{ STATIC_URL }}images/album_cover_bg_1.jpeg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row animate-box">
+        <div class="col-md-8 col-md-offset-2 text-center heading-section">
+          <h2>Do you wanna see our photos?</h2>
+          <p>Come checkout our lovely memories!</p>
+        </div>
+        <div class="col-md-10 col-md-offset-1 text-center">
+          {% if request.user.is_authenticated %}
+          <div class="form-group">
+            <a class="btn btn-primary btn-lg form-control" href="{% url 'about' %}" role="button">Album Box</a>
+            <!-- TODO: change url to user's album page. -->
+            {% else %}
+            <a class="btn btn-primary btn-lg form-control" href="{% url 'account_login' %}" role="button">Album Box</a> {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /container -->
+
+
 {% include 'shared/footer.html' %}
 {% endblock main%}
 
