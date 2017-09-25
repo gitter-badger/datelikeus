@@ -7,43 +7,31 @@
       <!-- START #fh5co-menu-wrap -->
       <nav id="fh5co-menu-wrap" role="navigation">
         <ul class="sf-menu" id="fh5co-primary-menu">
-          <li class="active"><a href="{% url 'home' %}" >Home <span class="sr-only">(current)</span></a></li>
+          {% if request.user.is_authenticated %}
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'account_signup' %}"> {% trans "Album Box" %}</a>  <!-- TODO: change url to user's album page. -->
+          </li>
           <li>
-            <a href="groom-bride.html" class="fh5co-sub-ddown">Test &amp; Test!</a>
+            <a href="{% url 'users:update' %}" class="fh5co-sub-ddown"><i class="fa fa-cog fa-2x" aria-hidden="true"></i></a>
             <ul class="fh5co-sub-menu">
-              <li><a href="https://freehtml5.co/wedding-free-html5-bootstrap-template-for-wedding-websites/">Wedding Template</a></li>
-              <li><a href="https://freehtml5.co/marble-free-html5-bootstrap-template-for-portfolio-or-multi-purpose-websites/">Marble Template</a></li>
-              <li><a href="https://freehtml5.co/tasty-free-bootstrap-html5-template-for-restaurant-websites/">Tasty Template</a></li>
-              <li><a href="https://freehtml5.co/education-free-html5-bootstrap-template-elearning-school-websites/">Education Template</a></li>
-              <li><a href="https://freehtml5.co/words-free-html5-bootstrap-template-multi-purpose/">Words Template</a></li>
+            <li class="nav-link"><a href="{% url 'users:detail' request.user.username  %}">{% trans "Signed in as "%}{% trans request.user.username %} <span class="sr-only">(current)</span></a></li>
+              {# URL provided by django-allauth/account/urls.py #}
+              <!--<a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>-->
+              <li><a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a></li>
             </ul>
           </li>
-          {% if request.user.is_authenticated %}
-            <li class="nav-item">
-              {# URL provided by django-allauth/account/urls.py #}
-              <a class="nav-link" href="{% url 'users:update' %}">{% trans "My Profile" %}</a>
-              <!--<a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>-->
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'account_signup' %}"> {% trans "Album" %}</a> <!-- TODO: change url to user's album page. -->
-            </li>
-            <li class="nav-item">
-              {# URL provided by django-allauth/account/urls.py #}
-              <a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
-            </li>
           {% else %}
-            <li class="nav-item">
-              {# URL provided by django-allauth/account/urls.py #}
-              <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
-            </li>
-            <li class="nav-item">
-              {# URL provided by django-allauth/account/urls.py #}
-              <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
-            </li>
+          <li class="nav-item">
+            {# URL provided by django-allauth/account/urls.py #}
+            <a id="sign-up-link" class="nav-link" href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a>
+          </li>
+          <li class="nav-item">
+            {# URL provided by django-allauth/account/urls.py #}
+            <a id="log-in-link" class="nav-link" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
+          </li>
           {% endif %}
         </ul>
       </nav>
     </div>
   </div>
 </header>
-
