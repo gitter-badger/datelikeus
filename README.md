@@ -5,6 +5,7 @@ Dating time counting service for lovers. :couple_with_heart: :couple: :heart:
 ## Built With
 
 * [Cookiecutter-django](https://github.com/pydanny/cookiecutter-django) - Cookiecutter Django is a framework for jumpstarting production
+    - [Documentation](https://cookiecutter-django.readthedocs.io/en/latest/) - Latest documentation
 
 ## Versioning
 
