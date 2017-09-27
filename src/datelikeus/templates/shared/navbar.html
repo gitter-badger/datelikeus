@@ -9,15 +9,17 @@
         <ul class="sf-menu" id="fh5co-primary-menu">
           {% if request.user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'account_signup' %}"> {% trans "Album Box" %}</a>  <!-- TODO: change url to user's album page. -->
+            <a class="nav-link" href="{% url 'account_signup' %}"> {% trans "Album" %}</a>  <!-- TODO: change url to user's album page. -->
           </li>
           <li>
             <a href="{% url 'users:update' %}" class="fh5co-sub-ddown"><i class="fa fa-cog fa-2x" aria-hidden="true"></i></a>
             <ul class="fh5co-sub-menu">
-            <li class="nav-link"><a href="{% url 'users:detail' request.user.username  %}">{% trans "Signed in as "%}{% trans request.user.username %} <span class="sr-only">(current)</span></a></li>
+            <li class="nav-link"><a href="{% url 'detail' request.user.username  %}">{% trans "Signed in as"%} <strong class="css-username-newline">{% trans request.user.username %}</strong> <span class="sr-only">(current)</span></a></li>
+            <li class="dropdown-divider"></li>
+             <li><a class="nav-link" href="{% url 'users:update' %}">{% trans "Settings" %}</a></li>
               {# URL provided by django-allauth/account/urls.py #}
               <!--<a class="nav-link" href="{% url 'users:detail' request.user.username  %}">{% trans "My Profile" %}</a>-->
-              <li><a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a></li>
+              <li><a class="nav-link" href="{% url 'account_logout' %}">{% trans "Sign out" %}</a></li>
             </ul>
           </li>
           {% else %}
