@@ -77,6 +77,11 @@ figure {
   z-index: 9999999;
 }
 
+.css-username-newline {
+    margin-top: -7px;
+    display: block;
+}
+
 .stuck {
   position: fixed !important;
   top: 0 !important;
