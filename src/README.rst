@@ -1,14 +1,14 @@
 datelikeus
 ==========
 
-A short description of the project.
+Dating time counting service for lovers. :couple_with_heart: :couple: :heart:
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
      :alt: Built with Cookiecutter Django
 
 
-:License: Apache Software License 2.0
+:License: MIT
 
 
 Settings
