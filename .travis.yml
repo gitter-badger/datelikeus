@@ -31,8 +31,10 @@ branches:
     - master
 
 notifications:
-  email:
-    recipients:
-      - other@example.com
-    on_success: never
+  email: false
+  slack:
+    rooms:
+      - secure: H0NlcCNxOD+8zOYpvJM8d4FTrgR6Rjlf+EcRhbKzvLvRRbceppvYLtiQtW/uaw9oCQJszxT7R8ln8LNLQ5CfRApZLItCs2m4zUoXCUUqFtZRdc6YTWG+5vBA/H1K0oYGq2J6faVSjWmyLXyK1ze+IDyZkFEPkxg+kbbTGplx8Ka6S/zccfdatc4YfbXs+C7x4UESPD3s5Y5DkcfcaLjTGEqL3zQBCZ4NDlg/KL2k5J3GWURsbud8Q50QE5YuX5Dk9ITOIyCxNM4hl2MknrM3wddc5u4hA3j9+brWMJPN5b6RZfQgOGc+/9B06kTRr8RMgcJWo+wTsnFNeSw2j+sckdJF/KaRL1fhr2cWfxkEaD6635b8+DlHqHYTyl83SsY3aWbKdVtBeK7vEkVV1PqyuwTXfrJjM3eklKNuhVZggiBZeWRLlT48D/AgzRlQZ//sDa9aPypLWI2B0JbyWMenj1dLN8PJjeNEf9uzXMZHmvs4M/ZO/HoOtXATPC2PFr3YaOozzqAjQJo80Ey0rDgqFBxbaz8gP4+8mM+YnVRjcEKMXlYS55sBHl27BhijQNn41jjY3dyxLnVDtMjWnQcWBI+7/4sk8Is33dXoRcC1uLk1rwKIz/VjPmTKQLvsJrolorjFKd1O5spRr4uiVOUN6H5XirvWFhynk25BcAfLt80=
+    on_pull_requests: true
+    on_success: always
     on_failure: always
