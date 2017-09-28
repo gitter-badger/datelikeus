@@ -13,18 +13,6 @@ Dating time counting service for lovers. :couple_with_heart: :couple: :heart:
 
 We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/jeffminsungkim/datelikeus/tags).
 
-## Bugs
-Before opening a new issue, please search the existing [Issues](https://github.com/jeffminsungkim/datelikeus/issues) for anything similar - there might already be an answer to your problem.
+## Authors
 
-## Issues / Contributing
-[![Join the chat at https://gitter.im/datelikeus/Lobby](https://badges.gitter.im/datelikeus/Lobby.svg)](https://gitter.im/datelikeus/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-If there's anything you'd like to discuss, let's hang out on Gitter. :wave: :eyes: :simple_smile:
-
-<br><br>
-
----
-
-## Author
-
-© 2017  **Minsung Kim** - *Initial work* - [JeffMinsungKim](https://github.com/jeffminsungkim)
+* **Minsung Kim** - *Initial work* - [JeffMinsungKim](https://github.com/jeffminsungkim)
