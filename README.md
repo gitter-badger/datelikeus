@@ -1,4 +1,6 @@
 # Datelikeus
+
+[![Join the chat at https://gitter.im/datelikeus/Lobby](https://badges.gitter.im/datelikeus/Lobby.svg)](https://gitter.im/datelikeus/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](https://travis-ci.org/jeffminsungkim/datelikeus.svg?branch=master)](https://travis-ci.org/jeffminsungkim/datelikeus)
 [![Assertible status](https://assertible.com/apis/3dcd39b5-5fb7-4f16-86a9-8f16b325a06c/status?api_token=cNmqW5NUTsRlpr6z)](https://assertible.com/dashboard#/services/3dcd39b5-5fb7-4f16-86a9-8f16b325a06c/results)
 
